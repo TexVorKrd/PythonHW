@@ -74,10 +74,10 @@ for i in range(50):
 # точек и находит расстояние между ними в 2D пространстве.
 
 coordInfo = []
-coordInfo.append(int(input("точку X точки А")))
-coordInfo.append(int(input("точку Y точки А")))
-coordInfo.append(int(input("точку X точки B")))
-coordInfo.append(int(input("точку Y точки B")))
+coordInfo.append(int(input('точку X точки А')))
+coordInfo.append(int(input('точку Y точки А')))
+coordInfo.append(int(input('точку X точки B')))
+coordInfo.append(int(input('точку Y точки B')))
 
 for i in coordInfo:
     print((coordInfo[0]-coordInfo[3]))
