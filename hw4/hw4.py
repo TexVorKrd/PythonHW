@@ -127,38 +127,37 @@ def sum(multy1, multy2):
 
 # Создаем два многочлена и сохраняем их в разные файлы (по условию)
 
-str1 = multy_assembler(create_dic(int(input ('Введите степень первого многочлна '))))
 
-my_file = open('file1.txt','w')
+str1 = multy_assembler(create_dic(
+    int(input('Введите степень первого многочлна '))))
+
+my_file = open('file1.txt', 'w')
 my_file.writelines(str1)
 my_file.close
 
-str1 = multy_assembler(create_dic(int(input ('Введите степень второго многочлна '))))
+str1 = multy_assembler(create_dic(
+    int(input('Введите степень второго многочлна '))))
 
-my_file = open('file2.txt','w')
+my_file = open('file2.txt', 'w')
 my_file.writelines(str1)
 my_file.close
 
 # читываем многочлены из файлов в разные строки (по условию задачи)
-my_file = open('file1.txt','r')
-str1=my_file.readline()
+my_file = open('file1.txt', 'r')
+str1 = my_file.readline()
 my_file.close
-print ('Многочлен 1')
+print('Многочлен 1')
 print(str1)
 
-my_file = open('file2.txt','r')
-str2=my_file.readline()
+my_file = open('file2.txt', 'r')
+str2 = my_file.readline()
 my_file.close
-print ('Многочлен 2')
+print('Многочлен 2')
 print(str2)
-print ('Сумма многочленов')
-str3=sum(str1, str2)
+print('Сумма многочленов')
+str3 = sum(str1, str2)
 print(str3)
 
-my_file = open('file3.txt','w')
+my_file = open('file3.txt', 'w')
 my_file.writelines(str3)
 my_file.close
-
-
-
-
