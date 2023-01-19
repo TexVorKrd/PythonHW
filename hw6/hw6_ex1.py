@@ -77,3 +77,32 @@ def shuffl(lst):
 myList= [rnd.randint(1,100) for _ in range(10,20)]
 print (myList)
 print (shuffl(myList))
+
+
+
+# Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.
+# Пример:
+# - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
+
+# Создает Список случайных целых чисел
+# def createRandomeIntList(n=20,min=1,max=200):
+#     tList=[]
+#     for i in range(n):
+#         tList.append(rnd.randint(min,max))
+#     return tList
+
+# myList=createRandomeIntList(rnd.randint(5,30))
+# sum=0
+# print (myList,end=" -> на нечётных позициях элементы ")
+# myStr=''
+# if len(myList)>1:
+#     for i in range(1,len(myList),2):
+#             sum+=myList[i]
+#             myStr=myStr+str(myList[i])+', '
+# print (f'{myStr[0:-2]} ответ: {sum}')
+
+lst =  [rnd.randint(10,100) for _ in range(rnd.randint(10,20))]
+print (f'{lst} -> на нечётных позициях элементы {str(list(map(lambda b:b[1],filter(lambda a:a[0]%2, enumerate(lst)))))[1:-1]}, ответ {sum(list(map(lambda b:b[1],filter(lambda a:a[0]%2, enumerate(lst)))))} ')
+print (sum([x[1] for x in enumerate(lst) if x[0]%2==1]))
+
+
