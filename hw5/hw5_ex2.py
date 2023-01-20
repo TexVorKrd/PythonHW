@@ -106,9 +106,8 @@ def game_starter(players):
         print ('---НИЧЬЯ---')    
 
 
-# print_fild()
 cls()
-# print(win_cheker(start_fild))
+
 player_list=[['Игрок 1',rnd_bot],['Игрок 2 - БОТ',rnd_bot]]
 
 game_starter(player_list)
