@@ -108,7 +108,7 @@ def game_starter(players):
 
 cls()
 
-player_list=[['Игрок 1',rnd_bot],['Игрок 2 - БОТ',rnd_bot]]
+player_list=[['Игрок 1',manual_step],['Игрок 2 - БОТ',rnd_bot]]
 
 game_starter(player_list)
 

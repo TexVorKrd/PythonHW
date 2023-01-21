@@ -34,7 +34,7 @@ def bot_step(count, max):
         return count % (max+1)
 
 # Лямбдабот
-bot_AI=lambda a,b: 1 if a%(b+1)==0 else a%(b+1)
+bot_AI=lambda a,b: rnd.randint(1,min(a,28)) if a%(b+1)==0 else a%(b+1)
 
 # Лямбда рандом бот
 bot_rnd = lambda a,b: rnd.randint(1,min([a,b]))
@@ -60,7 +60,8 @@ def game_starter (players,candy_c, max_c):
 
 
 # Участники с логикой
-player_list = [('Бот AI',bot_AI),('Бот',bot_rnd)]
+player_list = [('Бот AI',bot_AI),(
+'Миша',manual_step)]
 
 max_candy_by_step=28
 candy_count = rnd.randint(100,400)
