@@ -53,7 +53,7 @@ class PhoneBook:
             return 1
 
     def save_to_file(self):
-        #  with open(self.path,encoding='UTF-8',mode='w') as file:
+
             pb_str=[]
             for line in self.phone_book:
                 pb_str.append(';'.join(line))
