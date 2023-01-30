@@ -3,7 +3,7 @@ class My_journal:
     def __init__(self,path:str='my_scool.txt'):
         self.path=path
         self.data=[]
-        with open(self.path,encoding='UTF-8',mode='r') as file:
+        with open(self.path,encoding='UTF-8',mode='r') as file:        
             self.data=file.readlines()
         
         # Словарь Классов
@@ -28,19 +28,41 @@ class My_journal:
 
 
 
-    def get_class(self):
-        return(self.classes_list)        
+    def get_class_number(self):
+        return(self.numer_of_class)
+    
+    def get_classes(self):
+        return(self.clasees)
 
+    def get_class_list(self):
+        return(self.classes_list)
+
+    def get_names(self):
+        return(self.names)
+
+    def get_matches_by_classes(self):
+        return(self.matches_by_classes)        
+
+    def add_ask(self,classes:int,id_puple:int,ask_number:int):
+        self.matches_by_classes.get(classes).get(id_puple).append(ask_number)
+
+    def save_date(self):
+        total_str=''
+        for (key,value) in self.get_matches_by_classes().items():
+            tmp_str=''
+            for (k,v) in value.items():
+                my_str=str(k)+','+''.join([str(a) for a in v])
+                tmp_str=tmp_str+my_str+';'
+            total_str=total_str+str(key)+';'+tmp_str[0:-1]+'|'
+        # print (total_str)
+        self.data[4]=total_str[0:-1]
+        with open(self.path,encoding='UTF-8',mode='w') as file:
+            file.writelines(self.data)    
+ 
     def print_data(self):
         pass        
 
-    def print_data(self):
-        pass        
-
-
-
-    def print_data(self):
-        pass        
+     
             
 
 
