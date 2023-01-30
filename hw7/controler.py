@@ -3,9 +3,7 @@ import view
 
 
 def start (journal:model.My_journal):
-    
-    is_end=0
-    
+ 
     # Выбор класса
     class_number =view.ask_class_list(journal.get_class_number())
     
